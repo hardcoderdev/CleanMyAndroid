@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="runtime.exception.cleanmyandroid.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/toDeviceBoostFragment"
+            app:destination="@id/deviceBoostFragment" />
+        <action
+            android:id="@+id/toSmartCleaningFragment"
+            app:destination="@id/smartCleaningFragment" />
+        <action
+            android:id="@+id/toOptimizeBatteryFragment"
+            app:destination="@id/optimizeBatteryFragment" />
+        <action
+            android:id="@+id/toThreatProtectionFragment"
+            app:destination="@id/threatProtectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optimizeBatteryFragment"
+        android:name="runtime.exception.cleanmyandroid.ui.optimizeBattery.OptimizeBatteryFragment"
+        android:label="fragment_optimize_battery"
+        tools:layout="@layout/optimize_battery_fragment" />
+    <fragment
+        android:id="@+id/smartCleaningFragment"
+        android:name="runtime.exception.cleanmyandroid.ui.smartCleaning.SmartCleaningFragment"
+        android:label="fragment_smart_cleaning"
+        tools:layout="@layout/smart_cleaning_fragment" />
+    <fragment
+        android:id="@+id/threatProtectionFragment"
+        android:name="runtime.exception.cleanmyandroid.ui.threatProtection.ThreatProtectionFragment"
+        android:label="fragment_threat_protection"
+        tools:layout="@layout/threat_protection_fragment" />
+    <fragment
+        android:id="@+id/deviceBoostFragment"
+        android:name="runtime.exception.cleanmyandroid.ui.deviceBoost.DeviceBoostFragment"
+        android:label="fragment_device_boost"
+        tools:layout="@layout/device_boost_fragment">
+        <action
+            android:id="@+id/toHomeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/threatsListFragment"
+        android:name="runtime.exception.cleanmyandroid.ui.threatsList.ThreatsListFragment"
+        android:label="fragment_threats_list"
+        tools:layout="@layout/threats_list_fragment" />
+</navigation>

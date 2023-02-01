@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/deviceHealthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/device_health_label"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/deviceHealthLevelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@id/deviceHealthTextView"
+        app:layout_constraintTop_toBottomOf="@id/deviceHealthTextView"
+        tools:text="Low" />
+
+    <ProgressBar
+        android:id="@+id/deviceHealthLevelProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:max="100"
+        android:progressDrawable="@drawable/solid_progress_bar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/deviceHealthLevelTextView"
+        app:layout_constraintTop_toBottomOf="@id/deviceHealthLevelTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:fontFamily="@font/rubik_regular"
+        app:layout_constraintEnd_toEndOf="@id/deviceHealthLevelProgressBar"
+        app:layout_constraintStart_toStartOf="@id/deviceHealthLevelProgressBar"
+        app:layout_constraintTop_toBottomOf="@id/deviceHealthLevelProgressBar"
+        tools:text="Great. The phone has accelerated significantly, for additional optimization, clear the memory. Cleaning contributes to an increase in productivity." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sliderRecyclerView"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        tools:listitem="@layout/slider_item"
+        tools:itemCount="5"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".ui.threatProtection.ThreatProtectionFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/threatProtectionTextView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="40sp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/threat_protection_label"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topHorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <LinearLayout
+        android:id="@+id/cardNotScannedApps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/progress_bar_card"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/topVerticalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topHorizontalGuideline">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notScannedAppsLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:text="@string/not_scanned_label"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notScannedAppsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:textColor="@color/another_red"
+            android:textSize="25sp"
+            tools:text="68 apps" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardPotentialThreats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/progress_bar_card"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/topVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/topHorizontalGuideline">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/potentialThreatsLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:text="@string/potential_threats_label"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/potentialThreatsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:textColor="@color/another_red"
+            android:textSize="25sp"
+            tools:text="0 Threats" />
+
+    </LinearLayout>
+
+    <runtime.exception.cleanmyandroid.base.customViews.SliderView
+        android:id="@+id/scanSlideToUnlock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintEnd_toEndOf="@id/cardPotentialThreats"
+        app:layout_constraintStart_toStartOf="@id/cardNotScannedApps"
+        app:layout_constraintTop_toBottomOf="@id/cardNotScannedApps" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/scanStateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/required_threats_scan_format"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/scanSlideToUnlock"
+        app:layout_constraintStart_toStartOf="@id/scanSlideToUnlock"
+        app:layout_constraintTop_toBottomOf="@id/scanSlideToUnlock" />
+
+    <runtime.exception.cleanmyandroid.base.customViews.OperationProgressView
+        android:id="@+id/operationProgressView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

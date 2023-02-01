@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "928000235531",
+    "project_id": "cleanmyandroid",
+    "storage_bucket": "cleanmyandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928000235531:android:ec30bf70af45a87ee24f0e",
+        "android_client_info": {
+          "package_name": "spiral.bit.dev.cleanmyandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928000235531-6dje1f7uqohbnggpqoa1i5dcni78v9m5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "spiral.bit.dev.cleanmyandroid",
+            "certificate_hash": "a0c05b384bdc7377af5b8e7471db2b21b729d118"
+          }
+        },
+        {
+          "client_id": "928000235531-nhthiro99lfa86lb4js6i1qpr79m7f1f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKfrRYbkyF4gLH6kxD53Qm4Brz8xUJNWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928000235531-nhthiro99lfa86lb4js6i1qpr79m7f1f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

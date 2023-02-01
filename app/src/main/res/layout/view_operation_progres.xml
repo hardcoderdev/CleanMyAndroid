@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/progress_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background"
+        tools:context=".ui.analyzeDevice.AnalyzeFragment">
+
+        <net.vrgsoft.arcprogress.ArcProgressBar
+            android:id="@+id/progressArcProgressBar"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            app:arc_angle="220"
+            app:arc_max="100"
+            app:arc_progress="50"
+            app:arc_progress_end_color="@color/light_purple"
+            app:arc_progress_start_color="@color/light_blue"
+            app:arc_text_color="@android:color/transparent"
+            app:arc_thickness="25dp"
+            app:arc_unfinished_color="@color/arc_progress_bar_background"
+            app:layout_constraintBottom_toTopOf="@id/topHorizontalGuidelineOperation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topHorizontalGuidelineOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progressRobotLottieAnimationView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="32dp"
+            app:layout_constraintBottom_toBottomOf="@id/progressArcProgressBar"
+            app:layout_constraintEnd_toEndOf="@id/progressArcProgressBar"
+            app:layout_constraintStart_toStartOf="@id/progressArcProgressBar"
+            app:layout_constraintTop_toTopOf="@id/progressArcProgressBar"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/robot" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/progressPercentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_bold"
+            android:textColor="@color/blue"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topHorizontalGuidelineOperation"
+            tools:text="4%" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/progressWhatWeAreDoingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/checking_installed_apps_label"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressPercentTextView" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_test_id"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/finishLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/finish_task_background"
+        android:visibility="visible"
+        tools:context=".ui.finishCheck.FinishCheckFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topHorizontalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <ImageView
+            android:id="@+id/finishIconCompleteImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/icon_check_cd"
+            android:src="@drawable/ic_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topHorizontalGuideline" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/finishTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            app:autoSizeMaxTextSize="40sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/finishIconCompleteImageView"
+            tools:text="Battery Optimized!" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomHorizontalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerFinishLayout"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottomHorizontalGuideline"
+            app:shimmer_auto_start="true"
+            app:shimmer_base_alpha="1"
+            app:shimmer_highlight_alpha="0.5"
+            app:shimmer_highlight_color="@color/white"
+            app:shimmer_repeat_delay="3000"
+            app:shimmer_repeat_mode="restart">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finishAccentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/rubik_bold"
+                android:background="@drawable/button_background"
+                app:backgroundTint="@null"
+                app:cornerRadius="16dp"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:icon="@drawable/ic_smart_cleaning"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                tools:text="Check mail" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerSecondaryLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/shimmerFinishLayout"
+            app:layout_constraintStart_toStartOf="@id/shimmerFinishLayout"
+            app:layout_constraintTop_toBottomOf="@id/shimmerFinishLayout"
+            app:shimmer_auto_start="true"
+            app:shimmer_base_alpha="1"
+            app:shimmer_highlight_alpha="0.7"
+            app:shimmer_highlight_color="@color/white"
+            app:shimmer_repeat_delay="3000"
+            app:shimmer_repeat_mode="restart">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finishSecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1b1e2d"
+            android:fontFamily="@font/rubik_medium"
+            android:paddingVertical="16dp"
+            android:text="@string/ok_go_home_label"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:cornerRadius="32dp" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

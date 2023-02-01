@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_background"
+            tools:context=".ui.deviceBoost.DeviceBoostFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verticalHalfScreenGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/deviceBoostTextView"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="@string/device_boost_label"
+                android:textColor="@color/white"
+                app:autoSizeMaxTextSize="40sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/cardProcesses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/card_background"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/verticalHalfScreenGuideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deviceBoostTextView">
+
+                <ImageView
+                    android:id="@+id/iconProcessesImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:contentDescription="@string/icon_processes_cd"
+                    android:src="@drawable/ic_menu" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/activeProcessesLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center"
+                    android:text="@string/active_processes_label"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/activeProcessesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center"
+                    android:textColor="@color/another_red"
+                    android:textSize="35sp"
+                    tools:text="41" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/activeProcessesInGbTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    tools:text="5,22 GB / 5,5 GB" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardMemory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/card_background"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/verticalHalfScreenGuideline"
+                app:layout_constraintTop_toBottomOf="@id/deviceBoostTextView">
+
+                <ImageView
+                    android:id="@+id/iconMemoryImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:contentDescription="@string/icon_memory_cd"
+                    android:src="@drawable/ic_cpu" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/memoryConsumptionLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center"
+                    android:text="@string/memory_consumption_label"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/memoryConsumptionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="center"
+                    android:textColor="@color/another_red"
+                    android:textSize="35sp"
+                    tools:text="81%" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/memoryConsumptionInGbTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center"
+                    android:textColor="@color/light_gray"
+                    android:textSize="16sp"
+                    tools:text="5,22 GB / 5,5 GB" />
+
+            </LinearLayout>
+
+            <runtime.exception.cleanmyandroid.base.customViews.SliderView
+                android:id="@+id/boostSlideToUnlock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="32dp"
+                android:paddingVertical="8dp"
+                app:layout_constraintEnd_toEndOf="@id/cardMemory"
+                app:layout_constraintStart_toStartOf="@id/cardProcesses"
+                app:layout_constraintTop_toBottomOf="@id/cardProcesses" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/deviceStateTextView"
+                android:layout_width="wrap_content"
+                app:layout_constraintVertical_bias="0"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="@string/device_boost_required_label"
+                android:textColor="@color/red"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/deviceCoolDownCard"
+                app:layout_constraintEnd_toEndOf="@id/boostSlideToUnlock"
+                app:layout_constraintStart_toStartOf="@id/boostSlideToUnlock"
+                app:layout_constraintTop_toBottomOf="@id/boostSlideToUnlock" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/deviceCoolDownCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/horizontal_card_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/cardMemory"
+                app:layout_constraintStart_toStartOf="@id/cardProcesses">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/localVerticalHalfScreenGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <ImageView
+                    android:id="@+id/iconLoadingImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_loading"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/cpuInCelsiusTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:gravity="bottom"
+                    android:textColor="@color/another_red"
+                    app:autoSizeMaxTextSize="40sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@id/iconLoadingImageView"
+                    app:layout_constraintEnd_toStartOf="@id/localVerticalHalfScreenGuideline"
+                    app:layout_constraintStart_toEndOf="@id/iconLoadingImageView"
+                    app:layout_constraintTop_toTopOf="@id/iconLoadingImageView"
+                    tools:text="54°C  " />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/coolDownRequiredTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="4dp"
+                    android:autoSizeMaxTextSize="16sp"
+                    android:autoSizeMinTextSize="8sp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="@string/cooldown_required_label"
+                    android:textColor="@color/red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/localVerticalHalfScreenGuideline"
+                    app:layout_constraintStart_toStartOf="@id/iconLoadingImageView"
+                    app:layout_constraintTop_toBottomOf="@id/iconLoadingImageView"
+                    tools:targetApi="o" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/coolDownButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeMinTextSize="13sp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@drawable/cool_down_ripple"
+                    android:fontFamily="@font/rubik_bold"
+                    android:letterSpacing="0"
+                    android:maxLines="1"
+                    android:text="@string/cool_down_label"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="32dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="o" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <runtime.exception.cleanmyandroid.base.customViews.OperationProgressView
+        android:id="@+id/operationProgressView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp" />
+</FrameLayout>

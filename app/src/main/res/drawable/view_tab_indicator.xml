@@ -1,0 +1,12 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:gravity="top" android:drawable="@drawable/ic_active_item_background" />
+            <item android:gravity="bottom|center_horizontal"
+                android:width="12dp"
+                android:height="4dp"
+                android:drawable="@drawable/item_menu_indicator"
+                android:bottom="4dp" />
+        </layer-list>
+    </item>
+</selector>

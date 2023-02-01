@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/sliderBackground"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/slider_start_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerIconLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/sliderBackground"
+        app:layout_constraintEnd_toEndOf="@id/sliderBackground"
+        app:layout_constraintTop_toTopOf="@id/sliderBackground"
+        app:shimmer_auto_start="false"
+        app:shimmer_base_alpha="1"
+        app:shimmer_highlight_alpha="0.5"
+        app:shimmer_highlight_color="@color/white"
+        app:shimmer_repeat_delay="3000"
+        app:shimmer_repeat_mode="restart">
+
+        <ImageView
+            android:id="@+id/sliderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_slide"
+           />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerSeekbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@id/sliderBackground"
+        app:layout_constraintEnd_toEndOf="@id/sliderBackground"
+        app:layout_constraintStart_toStartOf="@id/sliderBackground"
+        app:layout_constraintTop_toTopOf="@id/sliderBackground"
+        app:shimmer_auto_start="false"
+        app:shimmer_base_alpha="1"
+        app:shimmer_highlight_alpha="0.5"
+        app:shimmer_highlight_color="@color/white"
+        app:shimmer_repeat_delay="3000"
+        app:shimmer_repeat_mode="restart">
+
+        <SeekBar
+            android:id="@+id/slider_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="16dp"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/start_slider_thumb"
+            android:thumbOffset="10dp" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/completedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="16dp"
+        android:text="@string/ok_label"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

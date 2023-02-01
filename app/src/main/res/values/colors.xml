@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red">#EB3D39</color>
+    <color name="arc_progress_bar_background">#1b243e</color>
+    <color name="blue">#3862BD</color>
+    <color name="light_blue">#3862BD</color>
+    <color name="light_purple">#8D6DE4</color>
+    <color name="blind_gray">#a0a0a2</color>
+    <color name="active_item_color">#3862BD</color>
+    <color name="green">#33E988</color>
+
+
+
+    <color name="yellow">#F9E54B</color>
+
+
+    <color name="another_red">#CC484A</color>
+    <color name="light_gray">#D0CFD1</color>
+    <color name="button_dark_color">#1b1e2d</color>
+    <color name="bottom_menu_locked_color">#26FFFFFF</color>
+    <color name="gray_light">#D0CFD1</color>
+
+    <color name="saturation_red">#E43433</color>
+    <color name="orange">#FD772B</color>
+    <color name="light_yellow">#F8BB68</color>
+    <color name="light_green">#B4DD66</color>
+    <color name="green_medium">#5BD44D</color>
+
+    <color name="minimum_level">@color/saturation_red</color>
+    <color name="low_level">@color/orange</color>
+    <color name="average_level">@color/light_yellow</color>
+    <color name="above_average_level">@color/light_green</color>
+    <color name="maximum_level">@color/green_medium</color>
+</resources>

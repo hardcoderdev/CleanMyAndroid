@@ -1,0 +1,187 @@
+<resources>
+    <string name="app_name">System Booster</string>
+    <string name="app_logo_cd">App logo</string>
+    <string name="system_booster_label">System booster</string>
+    <string name="welcome_to_label">Welcome to</string>
+    <string name="used_space_label">Used Space</string>
+    <string name="free_space_label">Free Space</string>
+    <string name="well_help_you_with_your_first_cleaning_label">Well help you with your\nfirst cleaning</string>
+    <string name="percentage_format">%d%%</string>
+    <string name="device_health_label">Device health</string>
+    <string name="home_label">Home</string>
+    <string name="boost_label">Device Boost</string>
+    <string name="memory_label">Smart Clean</string>
+    <string name="anti_hacking_label">Anti Hacking</string>
+    <string name="battery_label">Battery Optimize</string>
+    <string name="threat_label">Threats</string>
+
+    <string-array name="scan_device">
+        <item>Checking installed apps…</item>
+        <item>Updating threats database…</item>
+        <item>Checking CPU usage…</item>
+    </string-array>
+
+    <string-array name="device_boost">
+        <item>Stopping old programs…</item>
+        <item>Optimizing RAM usage…</item>
+        <item>Cleaning cache…</item>
+    </string-array>
+
+    <string-array name="smart_clean">
+        <item>Cleaning cache…</item>
+        <item>Removing temp files…</item>
+        <item>Optimizing space…</item>
+    </string-array>
+
+    <string-array name="smart_protection">
+        <item>Updating threat database…</item>
+        <item>Checking security settings…</item>
+        <item>Detecting harmful apps…</item>
+    </string-array>
+
+    <string-array name="battery_optimization">
+        <item>Optimizing battery usage…</item>
+        <item>Checking CPU usage…</item>
+        <item>Boost battery…</item>
+    </string-array>
+
+    <string name="minimum_level_title">Minimum</string>
+    <string name="minimum_level_description">A smartphone can work much better. To increase the level of optimization, go through
+            all the steps and discover new features.</string>
+
+    <string name="low_level_title">Low</string>
+    <string name="low_level_description">Great. The phone has accelerated significantly, for additional optimization,
+            clear the memory. Cleaning contributes to an increase in productivity.</string>
+
+    <string name="average_level_title">Average</string>
+    <string name="average_level_description">
+        Great, the changes are already visible. A smartphone can work even better.
+            To do this, you need to scan your device for threats.
+    </string>
+
+    <string name="above_average_level_title">Above average</string>
+    <string name="above_average_level_description">
+    Excellent. You\'ve done a basic optimization of your device,
+            it\'s time to optimize battery performance.
+    </string>
+
+    <string name="maximum_level_title">Maximum</string>
+    <string name="maximum_level_description">
+        Your device is in excellent condition!
+            We will send a notification when optimization is needed.
+    </string>
+
+    <string name="boost_feature_item_title">Boost</string>
+    <string name="memory_feature_item_title">Memory</string>
+    <string name="threats_feature_item_title">Threats</string>
+    <string name="battery_feature_item_title">Battery</string>
+
+    <string name="device_boost_finish">Clear memory</string>
+    <string name="smart_clean_finish">Scan the app</string>
+    <string name="threat_protection_finish">Optimize battery</string>
+    <string name="battery_optimization_finish">Check mail</string>
+
+    <!-- ADS -->
+    <string name="admob_app_test_id">ca-app-pub-9901072858183898~5383469834</string>
+    <!-- <string name="admob_app_id"></string> -->
+
+    <string name="banner_test_id">ca-app-pub-9901072858183898/8278098621</string>
+    <!-- <string name="banner_id"></string> -->
+    <string name="checking_installed_apps_label">Checking installed apps…</string>
+
+    <string name="add_open_test_id">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="ok_label">OK</string>
+    <string name="shared_prefs_file">CLEAN_MY_ANDROID_PREFS</string>
+    <string name="device_boost_label">Device boost</string>
+    <string name="icon_processes_cd">Icon processes</string>
+    <string name="active_processes_label">Active\nProcesses</string>
+    <string name="icon_memory_cd">Icon memory</string>
+    <string name="memory_consumption_label">Memory\nconsumption</string>
+    <string name="cooldown_required_label">Cooldown required</string>
+    <string name="cool_down_label">Cool Down</string>
+    <string name="device_boost_required_label">Device Boost Required</string>
+    <string name="icon_check_cd">Icon Check</string>
+    <string name="ok_labek">Ok</string>
+    <string name="ok_go_home_label">Ok</string>
+    <string name="celsius_format">%d°C</string>
+    <string name="device_boost_not_required">The device works in optimal mode!</string>
+    <string name="optimized_label">Optimized!</string>
+    <string name="smart_clean_label">Smart cleaning</string>
+    <string name="cache_memory_label">Cache Memory</string>
+    <string name="residual_files_label">Residual Files</string>
+    <string name="temporary_files_label">Temporary Files</string>
+    <string name="system_junk_label">System Junk</string>
+    <string name="application_manager_label">Application Manager</string>
+    <string name="icon_open_menu_cd">Icon open menu</string>
+    <string name="delete_app_icon_cd">Delete app icon</string>
+    <string name="app_icon_cd">App icon</string>
+    <string name="explore_apps_list_label">Explore apps list</string>
+    <string name="while_cleaning_memory_app_does_not_delete_your_personal_data_label">While cleaning memory, app does not delete your personal data.</string>
+    <string name="megabytes_format">%dmb</string>
+    <string name="threat_protection_label">Threat Protection</string>
+    <string name="not_scanned_label">Not scanned</string>
+    <string name="potential_threats_label">Potential Threats</string>
+    <string name="required_threats_scan_format">A scan is required.\n%d applications not scanned</string>
+    <string name="device_boost_completed">Device boost completed!</string>
+    <string name="smart_clean_completed">Memory optimized!</string>
+    <string name="threat_protection_completed">All threats removed!</string>
+    <string name="battery_optimization_completed">Battery optimized!</string>
+    <string name="founded_threats_format">We found %d high risk apps that can slow down your phone and increase battery consuption. App expert team recommends that you uninstall them to prevent lags and secure your phone</string>
+    <string name="threat_detected_label">Threat detected!</string>
+    <string name="ignore_label">Ignore</string>
+    <string name="no_trash_label">All clear!</string>
+    <string name="battery_optimization_label">Battery</string>
+    <string name="battery_image_cd">Battery image</string>
+    <string name="select_battery_mode_label">Select battery mode</string>
+    <string name="normal_mode_label">Normal\nMode</string>
+    <string name="hours_label">Hours</string>
+    <string name="ultra_mode_label">Ultra\nMode</string>
+    <string name="extreme_mode_label">Extreme\nMode</string>
+    <string name="minutes_label">Minutes</string>
+    <string name="time_hm_format">%dh %dm</string>
+    <string name="time_h_format">%dh</string>
+    <string name="time_m_format">%dm</string>
+    <string name="play_store_format">https://play.google.com/store/apps/details?id=%s</string>
+    <string name="not_scanned_format">%d apps</string>
+    <string name="potential_threats_format">%d threats</string>
+    <string name="uninstall_format">Uninstall (%d) apps</string>
+    <string name="all_threats_are_removed_label">All threats are removed</string>
+    <string name="scan_not_required_label">No scanning required.\n%d apps scanned</string>
+    <string name="junk_format">"%d MB of junk "</string>
+    <string name="apps_scan_format">%d apps not scanned</string>
+    <string name="can_be_cleaned_format">%d MB can be cleaned</string>
+    <string name="successfully_cleaned">Successfully cleaned</string>
+    <string name="all_apps_scanned">All apps scanned</string>
+    <string name="battery_mode_applied">Battery mode applied</string>
+    <string name="ratio_format">%s / %s</string>
+    <string name="boost_feature_item_desciption">Can be boosted</string>
+    <string name="memory_feature_item_description">%d MB can be cleaned</string>
+    <string name="battery_feature_item_description">Can be optimized</string>
+    <string name="threats_feature_item_description">%d apps not scanned</string>
+    <string name="swipe_to_remove_unnecessary_files_and_trash_label">Swipe to remove\nunnecessary\nfiles and trash</string>
+    <string name="memory_all_cleaned_description">All cleaned</string>
+    <string name="threats_removed_description">All threats have been eliminated</string>
+    <string name="remove_threats_label">Remove threats</string>
+    <string name="temrorary_files_label">Temporary Files</string>
+    <string name="gigabyte_format">%.1f GB</string>
+    <string name="percent_symbol">%</string>
+    <string name="gb_symbol">GB</string>
+    <string name="gigabyte_without_label_format">%.1f</string>
+    <string name="percentage_without_percent_format">%d</string>
+    <string name="interstitial_admob_test_ads">ca-app-pub-9901072858183898/9461605207</string>
+    <string name="notification_channel">channel_id_clean_my_android</string>
+    <string name="chargement_enhacement_label">Charging enhancement tool</string>
+    <string name="cpu_booster_label">CPU Booster</string>
+    <string name="try_clear_cache_description">Try clearing the cache and unwanted files to free up more space.</string>
+    <string name="reduce_apps_description">Several applications that reduce charging speed have been detected. Click to improve.</string>
+    <string name="optimize_apps_description">"Try optimizing background apps to conserve battery life. "</string>
+    <string name="cpu_description">The CPU temperature is not within the normal range. Optimize to free up more space.</string>
+    <string name="ram_usage_description">RAM usage has reached 72%, the phone is running slower. Boost your productivity now!</string>
+    <string name="slower_phone_description">"Your phone has become much slower. Speed up and optimize your device "</string>
+    <string name="clean_label">Clear</string>
+    <string name="close_label">Close</string>
+    <string name="optimize_label">Optimize</string>
+    <string name="later_label">Later</string>
+    <string name="rid_trash_label">Rid trash</string>
+    <string name="notification_action">spiral.bit.dev.cleanmyandroid</string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".ui.threatsList.ThreatsListFragment">
+
+    <View
+        android:id="@+id/threatSignalView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/ic_threat_signal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/threatDetectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/threat_detected_label"
+        android:textColor="@color/red"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/threatSignalView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/threatsCountTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/founded_threats_format"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/threatDetectedTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/threatsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/threatsCountTextView"
+        app:layout_constraintStart_toStartOf="@id/threatsCountTextView"
+        app:layout_constraintTop_toBottomOf="@id/threatsCountTextView"
+        app:layout_constraintBottom_toTopOf="@id/dividerView"
+        tools:listitem="@layout/threats_item" />
+
+    <View
+        android:id="@+id/dividerView"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        android:background="#1AFFFFFF"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/unInstallAppsButton"
+        app:layout_constraintEnd_toEndOf="@id/threatsRecyclerView"
+        app:layout_constraintStart_toStartOf="@id/threatsRecyclerView"
+        app:layout_goneMarginTop="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/unInstallAppsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingVertical="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="#FFD2312E"
+        android:fontFamily="@font/rubik_bold"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="@id/dividerView"
+        app:layout_constraintStart_toStartOf="@id/dividerView"
+        app:layout_constraintBottom_toTopOf="@id/ignoreButton"
+        tools:text="Uninstall (4) apps" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ignoreButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="32dp"
+        android:paddingVertical="16dp"
+        android:backgroundTint="@color/button_dark_color"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/ignore_label"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

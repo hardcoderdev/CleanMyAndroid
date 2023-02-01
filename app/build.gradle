@@ -1,0 +1,91 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
+    id("com.google.gms.google-services")
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "spiral.bit.dev.cleanmyandroid"
+        minSdk 21
+        targetSdk 32
+        versionCode 3
+        versionName "1.2"
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    viewBinding.enabled true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    // UI
+    implementation("androidx.appcompat:appcompat:$appCompatVersion")
+    implementation 'androidx.transition:transition:1.4.1'
+    implementation("com.google.android.material:material:$materialVersion")
+    implementation("q.rorbin:badgeview:$badgeViewVersion")
+    implementation("androidx.constraintlayout:constraintlayout:$constraintLayoutVersion")
+    implementation("com.kirich1409.viewbindingpropertydelegate:viewbindingpropertydelegate:$viewBindingVersion")
+    implementation("com.airbnb.android:lottie:$lottieVersion")
+    implementation("com.github.VRGsoftUA:ArcProgressBar:$arcProgressBarVersion")
+    implementation("com.facebook.shimmer:shimmer:$shimmerVersion")
+
+    // Adapters
+    implementation("com.hannesdorfmann:adapterdelegates4-kotlin-dsl:$adapterDelegateVersion")
+    implementation("com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapterDelegateVersion")
+
+    // Ktx's
+    implementation("androidx.core:core-ktx:$coreKtxVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleKtxVersion")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleKtxVersion")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleKtxVersion")
+
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-extensions:$lifecycleExtVersion")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesCoreVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesAndroidVersion")
+
+    // Koin DI
+    implementation("io.insert-koin:koin-core:$koinVersion")
+    implementation("io.insert-koin:koin-android:$koinVersion")
+
+    // Navigation Component
+    implementation("androidx.navigation:navigation-fragment-ktx:$navigationKtxVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navigationKtxVersion")
+
+    // Admob Ads
+    implementation("com.google.android.gms:play-services-ads:$admobVersion")
+
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+}

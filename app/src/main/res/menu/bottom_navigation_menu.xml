@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home_label"
+        app:actionViewClass="android.widget.ImageView" />
+    <item
+        android:id="@+id/deviceBoostFragment"
+        android:icon="@drawable/ic_boost"
+        app:actionViewClass="android.widget.ImageView"
+        android:title="@string/boost_label" />
+    <item
+        android:id="@+id/smartCleaningFragment"
+        android:icon="@drawable/ic_memory"
+        app:actionViewClass="android.widget.ImageView"
+        android:title="@string/memory_label" />
+    <item
+        android:id="@+id/threatProtectionFragment"
+        android:icon="@drawable/ic_threats"
+        app:actionViewClass="android.widget.ImageView"
+        android:title="@string/threat_label" />
+    <item
+        android:id="@+id/optimizeBatteryFragment"
+        android:icon="@drawable/ic_battery"
+        app:actionViewClass="android.widget.ImageView"
+        android:title="@string/battery_label" />
+</menu>
